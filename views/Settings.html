@@ -1,0 +1,69 @@
+<div id='settingsContainer' class='w-100 my-5'>
+    <div class='d-flex flex-column m-auto' style='max-width: 400px'>
+        <h3>Dados de Usuário</h3>
+        <form action='#' id='formEditUser' novalidate>
+            <div class='alert alert-danger visually-hidden' role='alert'></div>
+            <fieldset disabled>
+                <div class='row row-cols-1 gx-0 gy-3'>
+                    <div class='form-floating'>
+                        <input type='text' name='visible_name' id='formEditUserName' class='form-control' value='...' placeholder='.'>
+                        <label for='formEditUserName'>Nome</label>
+                    </div>
+                    <div class='form-floating'>
+                        <input type='text' name='username' id='formEditUserUsername' class='form-control' value='...' placeholder='.'>
+                        <label for='formEditUserUsername'>Nome de Usuário</label>
+                    </div>
+                    <div class='form-floating'>
+                        <input type='date' name='birthdate' id='formEditUserBirthdate' class='form-control' placeholder='.'>
+                        <label for='formEditUserBirthdate'>Data de Nascimento</label>
+                    </div>
+                    <div class='form-floating'>
+                        <input type='email' name='email' id='formEditUserEmail' class='form-control' value='...' placeholder='.'>
+                        <label for='formEditUserEmail'>Email</label>
+                    </div>
+                    <div class='form-floating'>
+                        <input type='password' name='password' id='formEditUserPassword' class='form-control' placeholder='.'>
+                        <label for='formEditUserPassword'>Insira uma Nova Senha</label>
+                    </div>
+                    <div class='form-floating'>
+                        <input type='password' id='formEditUserPasswordConfirmation' class='form-control' placeholder='.'>
+                        <label for='formEditUserPasswordConfirmation'>Confirme sua Senha</label>
+                    </div>
+                    <div>
+                        <label for='formEditUserPictureFile' class='form-label'>Foto de Usuário</label>
+                        <input type='file' id='formEditUserPictureFile' class='form-control' accept='image/png'>
+                    </div>
+                </div>
+                <div class='row row-cols-1 gx-0 gy-3 mt-3'>
+                    <button type='submit' id='FormSignUpSubmit' class='w-100 btn btn-lg btn-primary'>
+                        Salvar Alterações
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+        <hr>
+        <button class='btn btn-lg btn-outline-danger' data-bs-toggle='modal' data-bs-target='#deleteUserConfirmModal'>
+            Deletar Usuário
+        </button>
+    </div>
+</div>
+
+<div class='modal fade' id='deleteUserConfirmModal' tabindex='-1'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 class='modal-title' id='exampleModalLabel'>Deletar Usuário</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+            </div>
+            <div class='modal-body'>
+                Você tem certeza que quer deletar seu usuário?<br>
+                Esta operação não poderá ser desfeita
+                <!-- TODO: insert a confirmation input -->
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-outline-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                <button type='button' id='btnDeleteUser' class='btn btn-danger'>Deletar Usuário</button>
+            </div>
+        </div>
+    </div>
+</div>

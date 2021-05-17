@@ -1,0 +1,26 @@
+:root {
+    --profile-picture-size-sm: 48px;
+    --profile-picture-size-lg: 150px;
+}
+
+.profile-picture-sm {
+    width: var(--profile-picture-size-sm);
+    max-width: var(--profile-picture-size-sm);
+    min-width: var(--profile-picture-size-sm);
+    height: var(--profile-picture-size-sm);
+    max-height: var(--profile-picture-size-sm);
+    min-height: var(--profile-picture-size-sm);
+}
+.profile-picture-lg {
+    width: var(--profile-picture-size-lg);
+    max-width: var(--profile-picture-size-lg);
+    min-width: var(--profile-picture-size-lg);
+    height: var(--profile-picture-size-lg);
+    max-height: var(--profile-picture-size-lg);
+    min-height: var(--profile-picture-size-lg);
+}
+
+.no-caret:before,
+.no-caret:after {
+    display: none;
+}
